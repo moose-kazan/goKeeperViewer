@@ -1,12 +1,7 @@
 package settings
 
-import "fyne.io/fyne/v2"
-
-var (
-	startLoadVariants = []string{
-		"None",
-		"Last File",
-	}
+import (
+	"fyne.io/fyne/v2"
 )
 
 const (
@@ -25,10 +20,6 @@ type goKeeperSettingsIface interface {
 	SetStartLoadOption(s string) *goKeeperSettings
 	GetConfirmExit() bool
 	SetConfirmExit(val bool)
-}
-
-func StartLoadOptions() []string {
-	return startLoadVariants
 }
 
 func New(pref fyne.Preferences) *goKeeperSettings {
@@ -50,13 +41,8 @@ func (p *goKeeperSettings) GetStartLoadOption() int {
 	return p.pref.Int("loadOnStart")
 }
 
-func (p *goKeeperSettings) SetStartLoadOption(s string) *goKeeperSettings {
-	for k, v := range startLoadVariants {
-		if v == s {
-			p.pref.SetInt("loadOnStart", k)
-			break
-		}
-	}
+func (p *goKeeperSettings) SetStartLoadOption(k int) *goKeeperSettings {
+	p.pref.SetInt("loadOnStart", k)
 	return p
 }
 

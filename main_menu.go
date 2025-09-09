@@ -2,6 +2,7 @@ package main
 
 import (
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/lang"
 	"fyne.io/fyne/v2/theme"
 )
 
@@ -15,17 +16,17 @@ func newMenuItem(label string, action func(), Icon fyne.Resource, Shortcut fyne.
 func BuildMenu() *fyne.MainMenu {
 	return fyne.NewMainMenu(
 		fyne.NewMenu(
-			"File",
-			newMenuItem("Open", actionMenuOpen, theme.DocumentIcon(), nil),
-			newMenuItem("Quit", actionWindowClose, theme.LogoutIcon(), nil),
+			lang.L("File"),
+			newMenuItem(lang.L("Open"), actionMenuOpen, theme.DocumentIcon(), nil),
+			newMenuItem(lang.L("Quit"), actionWindowClose, theme.LogoutIcon(), nil),
 		),
 		fyne.NewMenu(
-			"Settings",
-			newMenuItem("Settings", actionSettings, theme.SettingsIcon(), nil),
+			lang.L("Settings"),
+			newMenuItem(lang.L("Settings"), actionSettings, theme.SettingsIcon(), nil),
 		),
 		fyne.NewMenu(
-			"Help",
-			newMenuItem("About", actionHelpAbout, theme.InfoIcon(), nil),
+			lang.L("Help"),
+			newMenuItem(lang.L("About"), actionHelpAbout, theme.InfoIcon(), nil),
 		),
 	)
 }
