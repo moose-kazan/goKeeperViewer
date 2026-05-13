@@ -14,14 +14,14 @@ type FyneTheme struct {
 func New() *FyneTheme {
 	var ft FyneTheme
 	ft.colorsLight = make(map[fyne.ThemeColorName]color.Color)
-	ft.colorsLight[theme.ColorNameBackground] = color.RGBA{0xFF, 0xDA, 0xB9, 0xff}
-	ft.colorsLight[theme.ColorNameOverlayBackground] = color.RGBA{0xFF, 0xDA, 0xB9, 0xff}
+	ft.colorsLight[theme.ColorNameBackground] = color.RGBA{0xFF, 0xFF, 0xFF, 0xff}
+	ft.colorsLight[theme.ColorNameOverlayBackground] = color.RGBA{0xFF, 0xFF, 0xFF, 0xff}
 	ft.colorsLight[theme.ColorNameForeground] = color.RGBA{0x00, 0x00, 0x00, 0xff}
-	ft.colorsLight[theme.ColorNamePrimary] = color.RGBA{0xFF, 0xA5, 0x00, 0xff}
-	ft.colorsLight[theme.ColorNameSuccess] = color.RGBA{0xFF, 0xA5, 0x00, 0xff}
-	ft.colorsLight[theme.ColorNameButton] = color.RGBA{0xF6, 0xE4, 0xD1, 0xFF}
-	ft.colorsLight[theme.ColorNameMenuBackground] = color.RGBA{0xFF, 0xDA, 0xB9, 0xff}
-	ft.colorsLight[theme.ColorNameInputBackground] = color.RGBA{0xF6, 0xE4, 0xD1, 0xFF}
+	ft.colorsLight[theme.ColorNamePrimary] = color.RGBA{0xB0, 0xB0, 0xBA, 0xff}
+	ft.colorsLight[theme.ColorNameSuccess] = color.RGBA{0xB0, 0xBA, 0xB0, 0xff}
+	ft.colorsLight[theme.ColorNameButton] = color.RGBA{0xD0, 0xD0, 0xD0, 0xFF}
+	ft.colorsLight[theme.ColorNameMenuBackground] = color.RGBA{0xFF, 0xFF, 0xFF, 0xff}
+	ft.colorsLight[theme.ColorNameInputBackground] = color.RGBA{0xE0, 0xE0, 0xE0, 0xFF}
 	ft.colorsLight[theme.ColorNameDisabled] = color.RGBA{0x5A, 0x5A, 0x5A, 0xFF}
 	return &ft
 }
