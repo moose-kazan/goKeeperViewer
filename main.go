@@ -160,8 +160,7 @@ func main() {
 		nil,
 		nil,
 		nil,
-		container.NewGridWithColumns(
-			2,
+		container.NewHSplit(
 			passwordTree,
 			passwordDetails,
 		),
