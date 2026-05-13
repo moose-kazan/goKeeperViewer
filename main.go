@@ -76,7 +76,9 @@ func buildPasswordDetails() *widget.Form {
 	formNotes.MultiLine = true
 	formPassword := widget.NewPasswordEntry()
 	formPassword.Password = true
-	formPassword.Disable()
+	// Temproary disable:
+	// It is not possible to show password
+	//formPassword.Disable()
 
 	passwordDetails = widget.NewForm(
 		widget.NewFormItem(lang.L("Title"), widget.NewLabel("")),
